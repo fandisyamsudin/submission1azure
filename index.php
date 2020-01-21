@@ -27,12 +27,12 @@
  </form>
  <?php
     $host = "submission1appserver.database.windows.net";
-    $user = "<Fandi";
+    $user = "fandi";
     $pass = "Submission1azure";
     $db = "submission1db";
 
     try {
-        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn = new PDO("sqlsrv:server = submission1appserver.database.windows.net; Database = submission1db", "fandi", "Submission1azure");
         $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
     } catch(Exception $e) {
         echo "Failed: " . $e;
